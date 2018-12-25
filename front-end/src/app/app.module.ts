@@ -1,3 +1,4 @@
+import {FormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -9,6 +10,8 @@ import { SidebarComponent } from './core/sidebar/sidebar.component';
 import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RestaurantItemComponent } from './restaurants/restaurant-item/restaurant-item.component';
+import { RatingComponent } from './restaurants/rating/rating.component';
+import { PaginationComponent } from './restaurants/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { RestaurantItemComponent } from './restaurants/restaurant-item/restauran
     HomeComponent,
     SidebarComponent,
     RestaurantsComponent,
-    RestaurantItemComponent
+    RestaurantItemComponent,
+    RatingComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
