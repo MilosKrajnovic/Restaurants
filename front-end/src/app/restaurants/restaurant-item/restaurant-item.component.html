@@ -1,4 +1,4 @@
-<b class="text-primary"> {{restaurant.name}} </b>
+<b class="text-primary"><a (click) = "openModal(restaurant)">{{restaurant.name}} </a> </b>
 <p>{{restaurant.description}}</p>
 <p>Cuisine: {{restaurant.cuisine}}</p>
 <p>Rating: <res-rating [iconFull]="'assets/images/star-full.png'" [iconEmpty]="'assets/images/star-empty.png'" [value]="restaurant.rating"></res-rating> </p>

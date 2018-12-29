@@ -1,3 +1,4 @@
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RestaurantItemComponent } from './restaurants/restaurant-item/restaurant-item.component';
 import { RatingComponent } from './restaurants/rating/rating.component';
 import { PaginationComponent } from './restaurants/pagination/pagination.component';
+import { RestaurantModalComponent } from './restaurants/restaurant-modal/restaurant-modal.component';
 
 @NgModule({
   declarations: [
@@ -22,14 +24,17 @@ import { PaginationComponent } from './restaurants/pagination/pagination.compone
     RestaurantsComponent,
     RestaurantItemComponent,
     RatingComponent,
-    PaginationComponent
+    PaginationComponent,
+    RestaurantModalComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule.forRoot()
   ],
+  entryComponents: [RestaurantModalComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

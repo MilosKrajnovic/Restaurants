@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { RestaurantList } from '../model/restaurant-list';
 import { HttpClient, HttpParams } from '@angular/common/http';
+import { MenuList } from '../model/menu-list';
 
 const baseUrl = "http://localhost:3000/api/restaurants";
 
@@ -35,8 +36,13 @@ export class RestaurantsService {
     return new RestaurantList(res);
   }));
 
+
+
 }
+getMenu(restaurantId: number): Observable<MenuList>{
+  return this.http.get<RestaurantList>("http://localhost:3000/api/restaurants/" + restaurantId + "/menus").pipe(map(res =>{return new MenuList(res);
+    }));
 
 
-
+}
 }
